@@ -1,0 +1,67 @@
+.red {
+    border: 1px solid red;
+}
+
+.yellow {
+    border: 1px solid yellow;
+}
+
+.green {
+    border: 1px solid green;
+}
+
+.login-container {
+    .content-right {
+        border: 1px solid gray;
+        border-radius: 10px;
+        background-color: white;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+        box-sizing: border-box;
+
+        .brand {
+            font-size: 30px;
+            font-weight: 770;
+            color: #1877f2;
+            font-family: 'Klavika', sans-serif;
+            text-align: center;
+        }
+
+        .forgot-password {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .content-left {
+        .brand {
+            font-size: 60px;
+            font-weight: 770;
+            color: #1877f2;
+            font-family: 'Klavika', sans-serif;
+        }
+
+        .detail {
+            font-size: 25px;
+            padding-right: 50px;
+            font-weight: 400;
+        }
+
+        @media (max-width:1000px) and (min-width:700px) {
+            padding-left: calc(15px + (100vw - 700px) * (15 - 30) / (700 - 1000));
+        }
+
+        ;
+        margin-top: 10px;
+        // padding-left: 100px;
+    }
+
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#edf2fa;
+}
