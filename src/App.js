@@ -5,6 +5,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Register from "./components/Register/Register";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login>login</Login>
+          </Route>
+          <Route path='/register'>
+            <Register>register</Register>
           </Route>
           <Route path="*">404</Route>
         </Switch>
