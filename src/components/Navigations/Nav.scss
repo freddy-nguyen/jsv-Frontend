@@ -1,11 +1,48 @@
-// body {
-//     height: 125vh;
-//     background-image: url('https://codetheweb.blog/assets/img/posts/style-a-navigation-bar-css/background.jpg');
-//     background-size: cover;
-//     font-family: sans-serif;
-//     margin-top: 80px;
-//     padding: 30px;
+// // body {
+// //     height: 125vh;
+// //     background-image: url('https://codetheweb.blog/assets/img/posts/style-a-navigation-bar-css/background.jpg');
+// //     background-size: cover;
+// //     font-family: sans-serif;
+// //     margin-top: 80px;
+// //     padding: 30px;
+// // }
+// .topnav {
+//     header {
+//         background-color: #ddd;
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         height: 80px;
+//         display: flex;
+//         align-items: center;
+//         box-shadow: 0 0 25px 0 black;
+
+//         img {
+//             height: 80px;
+//             margin-left: 40px;
+//         }
+
+//         * {
+//             display: inline;
+//         }
+
+//         li {
+
+//             a {
+//                 color: black;
+//                 text-decoration: none;
+//                 padding: 31.5px;
+//             }
+
+//             :hover {
+//                 background-color: #e08b63;
+//                 color: white;
+//             }
+//         }
+//     }
 // }
+
 .topnav {
     header {
         background-color: #ddd;
@@ -20,24 +57,90 @@
 
         img {
             height: 80px;
+            /* Adjust the height of the logo for responsiveness */
             margin-left: 40px;
+            /* Adjust the margin for smaller screens */
         }
 
-        * {
-            display: inline;
+        nav {
+            flex: 1;
+
+            /* Take remaining space */
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: flex-end;
+
+                /* Align items to the right on larger screens */
+
+                li {
+                    a {
+                        color: black;
+                        text-decoration: none;
+                        padding: 31.5px;
+                        /* Adjust padding for smaller screens */
+                    }
+
+                    :hover {
+                        background-color: #e08b63;
+                        color: white;
+                    }
+                }
+            }
         }
+    }
+}
 
-        li {
+@media screen and (max-width:750px) {
+    .topnav {
+        header {
+            background-color: #ddd;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 25px 0 black;
 
-            a {
-                color: black;
-                text-decoration: none;
-                padding: 31.5px;
+            img {
+                display: none;
+                height: 60px;
+                /* Adjust the height of the logo for responsiveness */
+                margin-left: 20px;
+                /* Adjust the margin for smaller screens */
             }
 
-            :hover {
-                background-color: #e08b63;
-                color: white;
+            nav {
+                flex: 1;
+
+                /* Take remaining space */
+                ul {
+                    margin-left: 50;
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: flex-end;
+                    /* Align items to the right on larger screens */
+
+                    li {
+                        a {
+                            color: black;
+                            text-decoration: none;
+                            padding: 0px;
+                            /* Adjust padding for smaller screens */
+                        }
+
+                        :hover {
+                            background-color: #e08b63;
+                            color: white;
+                        }
+                    }
+                }
             }
         }
     }
